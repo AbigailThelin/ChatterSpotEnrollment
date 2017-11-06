@@ -1,0 +1,81 @@
+.addProfile{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 98809978
+}
+
+.aditionalInfo{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.emailAddressContainer{
+    width: 50%;
+    height: 100px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emailAdress{
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid grey;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.emailAdress:focus{
+    border:none;
+    border-bottom: 1.2px solid grey;
+    width: 90%;
+    outline: none;
+    cursor: pointer;
+}
+
+.addressContainer{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeAddress{
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid grey;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.homeAddress:focus{
+    border:none;
+    border-bottom: 1.2px solid grey;
+    width: 90%;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.nextAndBack{
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-around;
+}
+

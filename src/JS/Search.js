@@ -29,25 +29,19 @@ export default class Search extends Component{
             searchInput: '',
             searchResults: [],
             membersAfterSearch: false,
-            user:[{
-                name: '',
-                email: '',
-                number: '',
-                status: ''
-            }]
         }
         this.handleInput = this.handleInput.bind(this)
         this.showUsers = this.showUsers.bind(this)
     }
 
     showUsers(){
+        this.state.users.filter(user =>{
+            if(user === this.state.searchInput){
+                return user
+            }
+        })
         this.setState({
             membersAfterSearch: true
-        })
-        axios.get('http://localhost:3000/members').then(res=>{
-            this.setState({
-                users: res
-            })
         })
     }
 
@@ -60,6 +54,8 @@ export default class Search extends Component{
     }
 
     render(){
+
+
         return(
             <div className='Search'>
                 <div className='searchBox'>
@@ -94,7 +90,7 @@ export default class Search extends Component{
                         this.state.membersAfterSearch ?
                         <div className='membersInfo'>
                             <div className='memberList'>
-
+                                <p></p>
                             </div>
                         </div>
                         :
