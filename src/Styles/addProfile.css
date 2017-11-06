@@ -8,11 +8,15 @@
 
 .aditionalInfo{
     width: 100%;
-    height: 60%;
+    height: 20%;
     display: flex;
     justify-content: space-around;
 }
 
+.locationContainerProfile{
+    width: 100%;
+    height: 20%;
+}
 .emailAddressContainer{
     width: 50%;
     height: 100px;
@@ -71,10 +75,10 @@
 }
 
 
+
 .nextAndBack{
     width: 100%;
-    height: 100px;
-    background-color: pink;
+    height: 10%;
     display: flex;
     justify-content: space-around;
 }

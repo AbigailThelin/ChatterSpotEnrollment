@@ -30,14 +30,24 @@ export default class AddProfile extends Component{
                     <div className='addressContainer'>
                         <input className='homeAddress' placeholder='ADDRESS'/>
                     </div>
-                    
                 </div>
+
+                <div className='locationContainerProfile'>
+                    <select className='locationForm'>
+                        <option value="hide">---Location---</option>
+                        <option value='Provo'>PROVO</option>
+                        <option value='Lindon'>LINDON</option>
+                        <option value='Salt Lake'>SALT LAKE</option>
+                        <option value='Orem'>OREM</option>
+                    </select>
+                </div>
+                    
 
 
 
                 <div className='nextAndBack'>
-                    <p className='btnNext'> back</p>
-                    <span className='btnNext'>next </span>
+                    <Link to='/newMember'><p className='btnNext'> back</p></Link>
+                    <Link to='/completed'><p className='btnNext'>finish </p></Link>
                 </div>
             </div>
         )

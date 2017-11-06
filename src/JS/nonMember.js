@@ -25,10 +25,8 @@ export default class nonMember extends Component{
             textDelivered: false,
             waiting: false,
             optedIn: false,
-            profilePage: false
     }
     this.sendText = this.sendText.bind(this)
-    this.profilePage = this.profilePage.bind(this)
 }
 
     sendText(){
@@ -58,23 +56,10 @@ export default class nonMember extends Component{
         }, 8000)
         }
 
-        profilePage(){
-            this.setState({
-                profilePage: true
-            })
-        }
 
     render(){
         return(
             <div className='newMember'>
-
-                {
-                    !this.state.profilePage ?
-                    null :
-                    <div className='profile'>
-                    <AddProfile/>
-                    </div>
-                }
 
                 <div className='searchHeader'>
                     <Link to={'/'}><img className='backArrow' src={back} alt='back'/></Link>
@@ -139,15 +124,15 @@ export default class nonMember extends Component{
                             </div>
                         </div>
 
-                        <button className='sendTextBtn' onClick={this.sendText}>SEND</button>
+                       <button className='sendTextBtn' onClick={this.sendText}>SEND</button>
                         {
                             !this.state.textSent
                             ?
                             null
                             :
-                            <div className='nextBtn'>
+                            <Link to='/addProfile'><div className='nextBtn'>
                                 <span className='btnNext' onClick={this.profilePage}>next ></span>
-                            </div>
+                            </div></Link>
                         }
                     </div>
                     </div>

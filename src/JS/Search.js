@@ -25,21 +25,35 @@ export default class Search extends Component{
                 {
                     name: 'Abby', number: '801.777.7777', subscribed: false
                 },
+                {
+                    name: 'Abby Thelin', number: '801.777.7777', subscribed: false
+                },
+                {
+                    name: 'Abby Keenan', number: '801.777.7777', subscribed: false
+                },
+                {
+                    name: 'Abby Newell', number: '801.777.7777', subscribed: false
+                },
+                {
+                    name: 'Abby Lowerwald', number: '801.777.7777', subscribed: false
+                },
             ],
             searchInput: '',
             searchResults: [],
             membersAfterSearch: false,
+            user:[{
+                name: '',
+                email: '',
+                number: '',
+                status: ''
+            }]
         }
         this.handleInput = this.handleInput.bind(this)
         this.showUsers = this.showUsers.bind(this)
     }
 
     showUsers(){
-        this.state.users.filter(user =>{
-            if(user === this.state.searchInput){
-                return user
-            }
-        })
+
         this.setState({
             membersAfterSearch: true
         })
@@ -55,7 +69,24 @@ export default class Search extends Component{
 
     render(){
 
-
+        const allMembers = this.state.users.map((currentMember, i)=>{
+            return(
+                <div className='memberContainer'>
+                    <div className='searchNameContainer'>
+                        {currentMember.name}
+                    </div>
+                    <div className='searchNumberContainer'>
+                        {currentMember.number}
+                    </div>
+                    <div className='searchNumberContainer'>
+                        {currentMember.number}
+                    </div>
+                    <div className='searchNumberContainer'>
+                        {currentMember.number}
+                    </div>
+                </div>
+            )
+        })
         return(
             <div className='Search'>
                 <div className='searchBox'>
@@ -82,7 +113,7 @@ export default class Search extends Component{
                         }
                         <div className='inputArea'>
                             <input className='input' onChange={e=>this.handleInput('search',e)}/>
-                                <button className='btn' onClick={this.showUsers}>SEARCH</button>
+                            <button className='btn' onClick={this.showUsers}>SEARCH</button>
                         </div>
                     </div>
 
@@ -90,7 +121,23 @@ export default class Search extends Component{
                         this.state.membersAfterSearch ?
                         <div className='membersInfo'>
                             <div className='memberList'>
-                                <p></p>
+
+                            <div className='membersHeader'>
+                                <div className='nameMemberHead'>
+                                    <p>NAME</p>
+                                </div>
+                                <div className='nameMemberHead'>
+                                    <p>NUMBER</p>
+                                </div>
+                                <div className='nameMemberHead'>
+                                    <p>EMAIL</p>
+                                </div>
+                                <div className='nameMemberHead'>
+                                    <p>LOCATION</p>
+                                </div>
+                            </div>
+
+                                {allMembers}
                             </div>
                         </div>
                         :
