@@ -25,6 +25,18 @@ export default class Search extends Component{
                 {
                     name: 'Abby', number: '801.777.7777', subscribed: false
                 },
+                {
+                    name: 'Abby Thelin', number: '801.777.7777', subscribed: false
+                },
+                {
+                    name: 'Abby Keenan', number: '801.777.7777', subscribed: false
+                },
+                {
+                    name: 'Abby Newell', number: '801.777.7777', subscribed: false
+                },
+                {
+                    name: 'Abby Lowerwald', number: '801.777.7777', subscribed: false
+                },
             ],
             searchInput: '',
             searchResults: [],
@@ -44,11 +56,6 @@ export default class Search extends Component{
         this.setState({
             membersAfterSearch: true
         })
-        axios.get('http://localhost:3000/members').then(res=>{
-            this.setState({
-                users: res
-            })
-        })
     }
 
     handleInput(input, e){
@@ -60,6 +67,25 @@ export default class Search extends Component{
     }
 
     render(){
+
+        const allMembers = this.state.users.map((currentMember, i)=>{
+            return(
+                <div className='memberContainer'>
+                    <div className='searchNameContainer'>
+                        {currentMember.name}
+                    </div>
+                    <div className='searchNumberContainer'>
+                        {currentMember.number}
+                    </div>
+                    <div className='searchNumberContainer'>
+                        {currentMember.number}
+                    </div>
+                    <div className='searchNumberContainer'>
+                        {currentMember.number}
+                    </div>
+                </div>
+            )
+        })
         return(
             <div className='Search'>
                 <div className='searchBox'>
@@ -94,7 +120,7 @@ export default class Search extends Component{
                         this.state.membersAfterSearch ?
                         <div className='membersInfo'>
                             <div className='memberList'>
-
+                                {allMembers}
                             </div>
                         </div>
                         :

@@ -172,4 +172,30 @@
     overflow: scroll;
 }
 
-/* #344644 */
+/* ------------SINGLE MEMBER IN LIST-------- */
+
+.memberContainer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.memberContainer:hover{
+    background-color: yellow;
+}
+
+.searchNameContainer{
+    width: 20%;
+    height: 100%;
+    font-size: .7rem;
+}
+
+.searchNumberContainer{
+    width: 20%;
+    height: 100%;
+    font-size: .7rem;
+}
