@@ -53,6 +53,7 @@ export default class Search extends Component{
     }
 
     showUsers(){
+
         this.setState({
             membersAfterSearch: true
         })
@@ -112,7 +113,7 @@ export default class Search extends Component{
                         }
                         <div className='inputArea'>
                             <input className='input' onChange={e=>this.handleInput('search',e)}/>
-                                <button className='btn' onClick={this.showUsers}>SEARCH</button>
+                            <button className='btn' onClick={this.showUsers}>SEARCH</button>
                         </div>
                     </div>
 
@@ -120,6 +121,22 @@ export default class Search extends Component{
                         this.state.membersAfterSearch ?
                         <div className='membersInfo'>
                             <div className='memberList'>
+
+                            <div className='membersHeader'>
+                                <div className='nameMemberHead'>
+                                    <p>NAME</p>
+                                </div>
+                                <div className='nameMemberHead'>
+                                    <p>NUMBER</p>
+                                </div>
+                                <div className='nameMemberHead'>
+                                    <p>EMAIL</p>
+                                </div>
+                                <div className='nameMemberHead'>
+                                    <p>LOCATION</p>
+                                </div>
+                            </div>
+
                                 {allMembers}
                             </div>
                         </div>

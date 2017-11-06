@@ -1,0 +1,129 @@
+.additionalInfo{
+    width: 95%;
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+.scrollableForm{
+    width: 95%;
+    height: 33%;
+    background-color: #f1f1f1;
+    overflow: scroll;
+}
+
+/* -------------SCROLLABLFORM-------------- */
+.secondaryInfo{
+    display: flex;
+    width: 100%;
+
+}
+
+.emailAddressContainer{
+    width: 50%;
+    height: 100px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emailAdress{
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid grey;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    background-color: #f1f1f1
+}
+
+.emailAdress:focus{
+    border:none;
+    border-bottom: 1.2px solid grey;
+    width: 90%;
+    outline: none;
+    cursor: pointer;
+}
+
+.addressContainer{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeAddress{
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid grey;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    background-color: #f1f1f1
+}
+
+.homeAddress:focus{
+    border:none;
+    border-bottom: 1.2px solid grey;
+    width: 90%;
+    outline: none;
+    cursor: pointer;
+}
+
+.scrollableBirthdayForm{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dateInput{
+    background:#f1f1f1f1 url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+    border: none;
+    border-bottom: 1.2px solid grey;
+    cursor: pointer;
+}
+
+.Dateinput:focus{
+    outline: none;
+    
+}
+
+.location{
+    margin-top: 20px;
+}
+
+.locationForm{
+    cursor: pointer;
+    width: 30%;
+    border: 1.5px;
+    font-family: Raleway;
+    text-align: center;
+}
+
+.cancelBtn{
+    background-color: #3498db;
+    width: 30%;
+    color: white;
+    height: 30%;
+    cursor: pointer;
+    border-radius: 0;
+}
+@media screen and (min-width: 480px) {
+    .cancelBtn{
+        width: 20%;
+    }
+}
