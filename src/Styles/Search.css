@@ -231,7 +231,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
     margin-top: 20px;
+
     cursor: pointer;
 }
 
@@ -243,14 +245,17 @@
     width: 20%;
     height: 100%;
     font-size: .7rem;
+
     margin-top: 50px;
     text-transform: uppercase;
+
 }
 
 .searchNumberContainer{
     width: 20%;
     height: 100%;
     font-size: .7rem;
+
     margin-top: 50px;
 }
 
@@ -264,4 +269,5 @@
     .searchNameContainer{
         font-size: .85rem;
     }
+
 }
