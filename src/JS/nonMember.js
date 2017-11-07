@@ -142,29 +142,3 @@ export default class nonMember extends Component{
         )
     }
 }
-
-/* <div className='scrollableForm'>
-    <div className='secondaryInfo'>
-        <div className='emailAddressContainer'>
-            <input className='emailAdress' placeholder='EMAIL'/>
-        </div>
-
-        <div className='addressContainer'>
-            <input className='homeAddress' placeholder='ADDRESS'/>
-        </div>
-    </div>
-
-    <div className='scrollableBirthdayForm'>
-        <input className='dateInput' placeholder='mm/dd/yyyy'/>
-    </div>
-
-    <div className='location'>
-        <select className='locationForm'>
-            <option value="hide">---Location---</option>
-            <option value='Provo'>PROVO</option>
-            <option value='Lindon'>LINDON</option>
-            <option value='Salt Lake'>SALT LAKE</option>
-            <option value='Orem'>OREM</option>
-        </select>
-    </div>
-</div> */
