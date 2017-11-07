@@ -70,7 +70,7 @@ export default class nonMember extends Component{
                 {
                     !this.state.textSent ?
                     <div className='progressBarContainer'>
-                        <img src={statusBar} alt='progressBar'/>
+                        <img className='bar' src={statusBar} alt='progressBar'/>
                     </div> :
                     null
                 }
@@ -79,7 +79,7 @@ export default class nonMember extends Component{
                     !this.state.delivering ?
                     null :
                     <div className='progressBarContainer'>
-                        <img src={deliveringStatusBar} alt='progressBar'/>
+                        <img className='bar' src={deliveringStatusBar} alt='progressBar'/>
                     </div>
                 }
 
@@ -87,7 +87,7 @@ export default class nonMember extends Component{
                     !this.state.textDelivered ?
                     null : 
                     <div className='progressBarContainer'>
-                        <img src={sentStatusBar} alt='progressBar'/>
+                        <img className='bar' src={sentStatusBar} alt='progressBar'/>
                     </div>
                 }
 
@@ -95,7 +95,7 @@ export default class nonMember extends Component{
                     !this.state.waiting ?
                     null :
                     <div className='progressBarContainer'>
-                        <img src={waitingStatusBar} alt='progressBar'/>
+                        <img className='bar' src={waitingStatusBar} alt='progressBar'/>
                     </div>
                 }
 
@@ -103,12 +103,12 @@ export default class nonMember extends Component{
                     !this.state.optedIn ?
                     null :
                     <div className='progressBarContainer'>
-                        <img src={OptedIn} alt='progressBar'/>
+                        <img className='bar' src={OptedIn} alt='progressBar'/>
                     </div>
                 }
 
                 <div className='directions'>
-                    <p className='vipMember'>Become a <br/>VIP Member</p>
+                    <p className='vipMember'>Become a VIP Member</p>
                 </div>
 
                 <div className='inputForm'>

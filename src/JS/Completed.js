@@ -21,13 +21,16 @@ export default class Completed extends Component{
                 </div>
 
                 <div className='progressBarContainer'>
-                    <img src={finished} alt='progressbar'/>
+                    <img className='bar' src={finished} alt='progressbar'/>
                 </div>
-                    <p className='completedHeader'>COMPLETED</p>
+
+                <div className='completedHeadContainer'>
+                    <p className='completedHeader'>FORM COMPLETED</p>
+                </div>
 
 
                 <div className='completedContainer'>
-                    <img className='thumbsUp' src={thumbsUp} alt='thumbsup'/>
+                    {/* <img className='thumbsUp' src={thumbsUp} alt='thumbsup'/> */}
                 </div>
 
                 <div className='nextAndBack'>

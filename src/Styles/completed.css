@@ -9,6 +9,14 @@
     font-size: 1.6em;
 }
 
+.completedHeadContainer{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .completedContainer{
     width: 100%;
     height: 30%;

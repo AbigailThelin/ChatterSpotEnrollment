@@ -17,10 +17,13 @@ export default class AddProfile extends Component{
                 <Link to={'/'}><img className='backArrow' src={back} alt='back'/></Link>
                 <img className='Searchlogo' src={logo} alt='logo'/>
             </div>
-
                 <div className='progressBarContainer'>
-                    <img src={profileStatusBar} alt='statusBar'/>
+                    <img className='bar' src={profileStatusBar} alt='statusBar'/>
                 </div>
+                <div className='directions'>
+                    <p className='vipMember'>Additional Info</p>
+                </div>
+
 
                 <div className='aditionalInfo'>
                     <div className='emailAddressContainer'>
@@ -31,6 +34,7 @@ export default class AddProfile extends Component{
                         <input className='homeAddress' placeholder='ADDRESS'/>
                     </div>
                 </div>
+
 
                 <div className='locationContainerProfile'>
                     <select className='locationForm'>

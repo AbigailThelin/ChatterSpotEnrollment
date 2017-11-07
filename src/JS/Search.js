@@ -13,47 +13,49 @@ export default class Search extends Component{
         super()
         this.state={
             users: [
+                // {
+                //     name: 'anne', number: '801.121.1212', subscribed: true, email: 'anne@anne.com', location: 'Provo'
+                // },
+                // {
+                //     name: 'joe', number: '801.222.2222', subscribed: false, email: 'joe@joe.com', location: 'Provo'
+                // },
+                // {
+                //     name: 'Chris', number: '801.333.3333', subscribed: true, email: 'chris@chris.com', location: 'Provo'
+                // },   
                 {
-                    name: 'anne', number: '801.121.1212', subscribed: true
+                    name: 'Abby', number: '801.777.7777', subscribed: false, email: 'abby@abby.com'
                 },
                 {
-                    name: 'joe', number: '801.222.2222', subscribed: false
+                    name: 'Abby Thelin', number: '801.777.7777', subscribed: false, email: 'abby@abby.com', location: 'Provo'
                 },
                 {
-                    name: 'Chris', number: '801.333.3333', subscribed: true
-                },   
-                {
-                    name: 'Abby', number: '801.777.7777', subscribed: false
+                    name: 'Abby Keenan', number: '801.777.7777', subscribed: false, email: 'abby@abby.com', location: 'Provo'
                 },
                 {
-                    name: 'Abby Thelin', number: '801.777.7777', subscribed: false
+                    name: 'Abby Newell', number: '801.777.7777', subscribed: false, email: 'abby@abby.com', location: 'Provo'
                 },
                 {
-                    name: 'Abby Keenan', number: '801.777.7777', subscribed: false
+                    name: 'Abby Lowerwald', number: '801.777.7777', subscribed: false, email: 'abby@abby.com', location: 'Provo'
                 },
                 {
-                    name: 'Abby Newell', number: '801.777.7777', subscribed: false
+                    name: 'Abby Thelander', number: '801.777.7777', subscribed: false, email: 'abby@abby.com', location: 'Provo'
                 },
                 {
-                    name: 'Abby Lowerwald', number: '801.777.7777', subscribed: false
+                    name: 'Abby Smith', number: '801.777.7777', subscribed: false, email: 'abby@abby.com', location: 'Provo'
+                },
+                {
+                    name: 'Abby Dalgrhen', number: '801.777.7777', subscribed: false, email: 'abby@abby.com', location: 'Provo'
                 },
             ],
             searchInput: '',
             searchResults: [],
-            membersAfterSearch: false,
-            user:[{
-                name: '',
-                email: '',
-                number: '',
-                status: ''
-            }]
+            membersAfterSearch: false
         }
         this.handleInput = this.handleInput.bind(this)
         this.showUsers = this.showUsers.bind(this)
     }
 
     showUsers(){
-
         this.setState({
             membersAfterSearch: true
         })
@@ -68,6 +70,10 @@ export default class Search extends Component{
     }
 
     render(){
+        
+        const filteredMembers = this.state.users.filter(member=>{
+            return this.state.searchInput === member
+        })
 
         const allMembers = this.state.users.map((currentMember, i)=>{
             return(
@@ -79,14 +85,15 @@ export default class Search extends Component{
                         {currentMember.number}
                     </div>
                     <div className='searchNumberContainer'>
-                        {currentMember.number}
+                        {currentMember.email}
                     </div>
                     <div className='searchNumberContainer'>
-                        {currentMember.number}
+                        {currentMember.location}
                     </div>
                 </div>
             )
         })
+        console.log(filteredMembers)
         return(
             <div className='Search'>
                 <div className='searchBox'>
@@ -136,7 +143,6 @@ export default class Search extends Component{
                                     <p>LOCATION</p>
                                 </div>
                             </div>
-
                                 {allMembers}
                             </div>
                         </div>
