@@ -105,7 +105,7 @@ export default class Search extends Component{
 
                     <div className='hoverable'>
                         <img className='QM' src={QM} alt='hover'/>
-                        <span className='hoverableSpan'>SEARCH BY NAME NUMBER OR EMAIL</span>
+                        <span className='hoverableSpan'><p>SEARCH BY NAME NUMBER OR EMAIL</p></span>
                     </div>
 
                     <div className='searchBar'>

@@ -24,7 +24,7 @@ export default class AddProfile extends Component{
                     <p className='vipMember'>Additional Info</p>
                 </div>
 
-
+                <div className='additionalInfoContainer'>
                 <div className='aditionalInfo'>
                     <div className='emailAddressContainer'>
                         <input className='emailAdress' placeholder='EMAIL'/>
@@ -33,6 +33,7 @@ export default class AddProfile extends Component{
                     <div className='addressContainer'>
                         <input className='homeAddress' placeholder='ADDRESS'/>
                     </div>
+                </div>
                 </div>
 
 
