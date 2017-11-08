@@ -13,15 +13,15 @@ export default class Search extends Component{
         super()
         this.state={
             users: [
-                // {
-                //     name: 'anne', number: '801.121.1212', subscribed: true, email: 'anne@anne.com', location: 'Provo'
-                // },
-                // {
-                //     name: 'joe', number: '801.222.2222', subscribed: false, email: 'joe@joe.com', location: 'Provo'
-                // },
-                // {
-                //     name: 'Chris', number: '801.333.3333', subscribed: true, email: 'chris@chris.com', location: 'Provo'
-                // },   
+                {
+                    name: 'anne', number: '801.121.1212', subscribed: true, email: 'anne@anne.com', location: 'Provo'
+                },
+                {
+                    name: 'joe', number: '801.222.2222', subscribed: false, email: 'joe@joe.com', location: 'Provo'
+                },
+                {
+                    name: 'Chris', number: '801.333.3333', subscribed: true, email: 'chris@chris.com', location: 'Provo'
+                },   
                 {
                     name: 'Abby', number: '801.777.7777', subscribed: false, email: 'abby@abby.com'
                 },
@@ -71,11 +71,15 @@ export default class Search extends Component{
 
     render(){
         
-        const filteredMembers = this.state.users.filter(member=>{
-            return this.state.searchInput === member
+        let searchInput = this.state.searchInput
+        const filterMembers = this.state.users.filter(user=>{
+            var matches = user.name.indexOf(searchInput)>=0 || 
+                          user.number.indexOf(searchInput)>=0 ||
+                          user.email.indexOf(searchInput)>=0;
+            return matches;
         })
 
-        const allMembers = this.state.users.map((currentMember, i)=>{
+        const allMembers = filterMembers.map((currentMember, i)=>{
             return(
                 <div className='memberContainer'>
                     <div className='searchNameContainer'>
@@ -93,7 +97,7 @@ export default class Search extends Component{
                 </div>
             )
         })
-        console.log(filteredMembers)
+
         return(
             <div className='Search'>
                 <div className='searchBox'>
