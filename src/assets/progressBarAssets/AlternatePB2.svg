@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="359px" height="20px" viewBox="0 0 359 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-245.000000, -500.000000)">
+            <g id="Group-3" transform="translate(245.000000, 500.000000)">
+                <g id="Group-2">
+                    <text id="SEND-TEXT" font-family="Helvetica" font-size="8" font-weight="normal" fill="#6AAF6A">
+                        <tspan x="0" y="19">SEND TEXT</tspan>
+                    </text>
+                    <text id="Create-Profile" font-family="Helvetica" font-size="8" font-weight="normal" fill="#6AAF6A">
+                        <tspan x="151" y="17">Create Profile</tspan>
+                    </text>
+                    <text id="Profile-Complete" font-family="Helvetica" font-size="8" font-weight="normal" fill="#636763">
+                        <tspan x="300" y="17">Profile Complete</tspan>
+                    </text>
+                    <path d="M21.5,4.5 L325.698948,4.5" id="Line-3" stroke="#636763" stroke-linecap="square"></path>
+                    <circle id="Oval-4" fill="#C5E5C5" cx="22.5" cy="4.5" r="4.5"></circle>
+                    <circle id="Oval-4" fill="#6AAF6A" cx="22.5" cy="4.5" r="2.5"></circle>
+                    <circle id="Oval-4" fill="#636763" cx="175.5" cy="4.5" r="2.5"></circle>
+                    <circle id="Oval-4" fill="#636763" cx="328.5" cy="4.5" r="2.5"></circle>
+                </g>
+                <path d="M27.5,4.5 L176.503356,4.5" id="Line-4" stroke="#6AAF6A" stroke-linecap="square"></path>
+                <circle id="Oval-4" fill="#C5E5C5" cx="175.5" cy="4.5" r="4.5"></circle>
+                <circle id="Oval-4" fill="#6AAF6A" cx="175.5" cy="4.5" r="2.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

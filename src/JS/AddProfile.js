@@ -1,6 +1,11 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 
+import alternatePB2 from '../assets/progressBarAssets/AlternatePB2.svg'
+import spinner from '../assets/spinner.svg'
+import checkmark from '../assets/checkmark.svg'
+import clock from '../assets/clock.svg'
+
 import backArrow from '../assets/back arrow.svg'
 import profileStatusBar from '../assets/progressBarAssets/ProfileStatusBar.svg'
 import logo from '../assets/cs-logo.png'
@@ -17,9 +22,6 @@ export default class AddProfile extends Component{
                 <Link to={'/'}><img className='backArrow' src={back} alt='back'/></Link>
                 <img className='Searchlogo' src={logo} alt='logo'/>
             </div>
-                <div className='progressBarContainer'>
-                    <img className='bar' src={profileStatusBar} alt='statusBar'/>
-                </div>
                 <div className='directions'>
                     <p className='vipMember'>Additional Info</p>
                 </div>
@@ -54,6 +56,15 @@ export default class AddProfile extends Component{
                     <Link to='/newMember'><p className='btnNext'> back</p></Link>
                     <Link to='/completed'><p className='btnNext'>finish </p></Link>
                 </div>
+
+                <div className='textsProgress' id='profile'>
+                    <img className='checkmark' src={checkmark} alt='checkmark'/>
+                    <p className='spinnerTextDelivered'>OPTED IN</p>
+                </div>
+
+                <div className='progressBarContainer'>
+                    <img className='bar' src={alternatePB2} alt='progressBar'/>
+                </div> 
             </div>
         )
     }

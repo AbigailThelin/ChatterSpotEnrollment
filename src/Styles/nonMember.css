@@ -40,6 +40,22 @@
     animation: spin1 3s infinite linear;
 }
 
+.checkmark{
+    animation: fadeIn 1s;
+}
+
+.spinnerTextDelivered{
+    color: #6AAF6A;
+    font-size: .1em;
+    margin-top: 5px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0;} 
+    100% {opacity: 1;} 
+}
+
 @keyframes spin1{
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }

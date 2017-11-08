@@ -5,15 +5,11 @@ import AddProfile from './AddProfile.js'
 
 import alternatePB1 from '../assets/progressBarAssets/AlternateProgressBar1.svg'
 import spinner from '../assets/spinner.svg'
-
+import checkmark from '../assets/checkmark.svg'
+import clock from '../assets/clock.svg'
 
 import logo from '../assets/cs-logo.png'
 import back from '../assets/back arrow.svg'
-import statusBar from '../assets/progressBarAssets/PrimaryProgressBar.svg'
-import deliveringStatusBar from '../assets/progressBarAssets/primaryProgressBar2.svg'
-import sentStatusBar from '../assets/progressBarAssets/GroupThree.svg'
-import waitingStatusBar from '../assets/progressBarAssets/GroupFour.svg'
-import OptedIn from '../assets/progressBarAssets/OptedIn.svg'
 
 
 import '../Styles/nonMember.css'
@@ -25,8 +21,9 @@ export default class nonMember extends Component{
         this.state={
             textSent: false,
             delivering: false,
-            delivered: false
-
+            delivered: false,
+            waitingResponse: false,
+            optedIn: false
     }
     this.sendText = this.sendText.bind(this)
 }
@@ -38,14 +35,25 @@ export default class nonMember extends Component{
                 delivering: true
             })
         }, 100)
-        setTimout(()=>{
+        setTimeout(()=>{
             this.setState({
                 delivering: false,
                 delivered: true
             })
         }, 3000)
+        setTimeout(()=>{
+            this.setState({
+                delivered: false,
+                waitingResponse: true
+            })
+        }, 5000)
+        setTimeout(()=>{
+            this.setState({
+                waitingResponse: false,
+                optedIn: true
+            })
+        }, 8000)
         }
-
 
     render(){
         return(
@@ -111,9 +119,27 @@ export default class nonMember extends Component{
                         {
                             this.state.delivered ?
                             <div className='textsProgress'>
-                                <img className='spinner' src={spinner} alt='spinner'/>
-                                <p className='spinnerText'>TEXT DELIVERED</p>
+                                <img className='checkmark' src={checkmark} alt='checkmark'/>
+                                <p className='spinnerTextDelivered'>TEXT DELIVERED</p>
                             </div>  :
+                            null
+                        }
+                        
+                        {
+                            !this.state.waitingResponse ?
+                            null :
+                            <div className='textsProgress'>
+                                <img className='spinner' src={clock} alt='spinner'/>
+                                <p className='spinnerText'>WAITING FOR RESPONSE</p>
+                            </div>
+                        }
+
+                        {
+                            this.state.optedIn ?
+                            <div className='textsProgress'>
+                                <img className='checkmark' src={checkmark} alt='checkmark'/>
+                                <p className='spinnerTextDelivered'>OPTED IN</p>
+                            </div> :
                             null
                         }
                         
