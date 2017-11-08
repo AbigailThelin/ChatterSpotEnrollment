@@ -14,7 +14,6 @@
 .profile{
     width: 100%;
     height: 100vh;
-
     animation: slideInRight 1s;
 }
 
@@ -28,19 +27,42 @@
     } 
 } 
 
+.textsProgress{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spinner{
+    animation: spin1 3s infinite linear;
+}
+
+@keyframes spin1{
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spinnerText{
+    font-size: .1em;
+    margin-top: 5px;
+    color: #636763;
+    margin-top: 10px;
+}
 
 .progressBarContainer{
     width: 100%;
-    height: 90px;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3px;
 }
 
 @media screen and (min-width: 480px){
     .progressBarContainer{
-        height: 150px;
+        height: 10%;
     }
 }
 
@@ -56,6 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: orange; */
 }
 
 @media screen and (min-width: 480px){
@@ -78,7 +101,7 @@
 
 .inputForm{
     width: 100%;
-    margin-top: 20px
+    margin-top: 50px;
 }
 
 @media screen and (min-width: 480px){
@@ -172,6 +195,7 @@
     }
 }
 
+
 .sendTextBtn{
     width: 30%;
     height: 30px;
@@ -229,5 +253,6 @@
     font-size: .6rem;
     text-transform: uppercase;
     margin-top: 10px;
+    height: 20px;
     text-decoration: underline;
 }

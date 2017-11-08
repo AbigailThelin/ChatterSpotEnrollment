@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 
 import AddProfile from './AddProfile.js'
 
+import alternatePB1 from '../assets/progressBarAssets/AlternateProgressBar1.svg'
+import spinner from '../assets/spinner.svg'
+
 
 import logo from '../assets/cs-logo.png'
 import back from '../assets/back arrow.svg'
@@ -30,30 +33,10 @@ export default class nonMember extends Component{
 }
 
     sendText(){
-        setTimeout(()=>{
-            this.setState({
-                textSent: true,
-                delivering: true
-            })
-        }, 500)
-        setTimeout(()=>{
-            this.setState({
-                delivering: false,
-                textDelivered: true
-            })
-        }, 2000)
-        setTimeout(()=>{
-            this.setState({
-                textDelivered: false,
-                waiting: true
-            })
-        }, 5000)
-        setTimeout(()=>{
-            this.setState({
-                waiting: false,
-                optedIn: true
-            })
-        }, 8000)
+        this.setState({
+            textSent: true
+        })
+        
         }
 
 
@@ -65,54 +48,13 @@ export default class nonMember extends Component{
                     <Link to={'/'}><img className='backArrow' src={back} alt='back'/></Link>
                     <img className='Searchlogo' src={logo} alt='logo'/>
                 </div>
-              
 
-                {
-                    !this.state.textSent ?
-                    <div className='progressBarContainer'>
-                        <img className='bar' src={statusBar} alt='progressBar'/>
-                    </div> :
-                    null
-                }
-
-                {
-                    !this.state.delivering ?
-                    null :
-                    <div className='progressBarContainer'>
-                        <img className='bar' src={deliveringStatusBar} alt='progressBar'/>
-                    </div>
-                }
-
-                {
-                    !this.state.textDelivered ?
-                    null : 
-                    <div className='progressBarContainer'>
-                        <img className='bar' src={sentStatusBar} alt='progressBar'/>
-                    </div>
-                }
-
-                {
-                    !this.state.waiting ?
-                    null :
-                    <div className='progressBarContainer'>
-                        <img className='bar' src={waitingStatusBar} alt='progressBar'/>
-                    </div>
-                }
-
-                {
-                    !this.state.optedIn ?
-                    null :
-                    <div className='progressBarContainer'>
-                        <img className='bar' src={OptedIn} alt='progressBar'/>
-                    </div>
-                }
 
                 <div className='directions'>
-                    <p className='vipMember'>Become a VIP Member</p>
+                    <p className='vipMember'>Enroll a VIP Member</p>
                 </div>
 
                 <div className='inputForm'>
-                    <div className='basicInfo'>
 
                         <div className='topForm'>
                             <div className='nameContainer'>
@@ -124,19 +66,44 @@ export default class nonMember extends Component{
                             </div>
                         </div>
 
+
+                    
                        <button className='sendTextBtn' onClick={this.sendText}>SEND</button>
                         {
                             !this.state.textSent
                             ?
-                            null
+                            <div className='btnNext'></div>
                             :
                             <Link to='/addProfile'><div className='nextBtn'>
                                 <span className='btnNext' onClick={this.profilePage}>next ></span>
                             </div></Link>
                         }
-                    </div>
+
                     </div>
 
+                    
+                        {
+                            this.state.textSent ?
+                            null :
+                            <div className='textsProgress'>
+                                <img className='spinner' src={spinner} alt='spinner'/>
+                                <p className='spinnerText'>WAITING TO SEND TEXT</p>
+                            </div>  
+                        }
+
+                        {
+                          this.state.textSent ?
+                          <div className='textsProgress'>
+                            <img className='spinner' src={spinner} alt='spinner'/>
+                            <p className='spinnerText'>DELIVERING TEXT</p>
+                        </div> 
+                        :
+                        null  
+                        }
+                        
+                    <div className='progressBarContainer'>
+                        <img className='bar' src={alternatePB1} alt='progressBar'/>
+                    </div> 
 
             </div>
         )
