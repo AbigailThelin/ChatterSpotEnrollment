@@ -3,28 +3,70 @@
     height: 100vh;
 }
 
-.completedHeader{
+.completedInfoContainer{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #6AAF6A;
+    /* background-color: pink; */
+}
+
+.completedInfo{
     font-family: Raleway;
-    font-size: 1.6em;
+    font-size: .8rem;
 }
 
 .completedHeadContainer{
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.completedContainer{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#completed{
     height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: purple; */
+}
+
+.completedHeader{
+    color: #3498DB;
+    font-family: Raleway;
+    font-size: 2.3rem;
+}
+
+#completedNavBtns{
+    width: 100%;
+    height: 43%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: pink; */
+}
+
+.SearchBtn{
+    width: 30%;
+    height: 10%;
+    background-color: #3498DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Raleway;
+    font-size: .8rem;
+    color: white;
+    text-decoration: none;
+}
+
+#goBack{
+    font-family: Raleway;
+    font-size: .5rem;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+#pbContainer{
+    height: 14%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }

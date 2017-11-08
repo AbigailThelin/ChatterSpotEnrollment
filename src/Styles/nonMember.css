@@ -270,5 +270,10 @@
     text-transform: uppercase;
     margin-top: 10px;
     height: 20px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    color: black;
+}
+
+.btnNext:visited{
+    color: #808080
 }

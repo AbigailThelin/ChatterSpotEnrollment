@@ -21,20 +21,22 @@ export default class Completed extends Component{
                     <Link to='/newMember'><img className='add' src={plus} alt='add'/></Link>
                 </div>
 
+                <div className='completedInfoContainer'>
+                    <p className='completedInfo'>PROFILE AND OPTED IN COMPLETE</p>
+                </div>
+
                 <div className='completedHeadContainer'>
-                    <p className='completedHeader'>FORM COMPLETED</p>
+                    <p className='completedHeader' id="">THANK YOU!</p>
                 </div>
 
-
-                <div className='completedContainer'>
-                    {/* <img className='thumbsUp' src={thumbsUp} alt='thumbsup'/> */}
+                <div id='completedNavBtns'>
+                    <Link to='/' className='SearchBtn'><div >
+                        <p>GO TO SEARCH</p>
+                    </div></Link>
+                        <p id='goBack'>go back</p>
                 </div>
 
-                <div className='nextAndBack'>
-                    <Link to='/addProfile'><p className='btnNext'> back</p></Link>
-                    <Link to='/'><p className='btnNext'>search </p></Link>
-                </div>
-
+            <div id='pbContainer'>
                 <div className='textsProgress' id='completed'>
                     <img className='checkmark' src={checkmark} alt='checkmark'/>
                     <p className='spinnerTextDelivered'>OPTED IN</p>
@@ -43,6 +45,9 @@ export default class Completed extends Component{
                 <div className='progressBarContainer'>
                     <img className='bar' src={alternatePB3} alt='progressBar'/>
                 </div> 
+            </div>
+
+
             </div>
         )
     }
