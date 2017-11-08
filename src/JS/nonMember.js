@@ -25,18 +25,25 @@ export default class nonMember extends Component{
         this.state={
             textSent: false,
             delivering: false,
-            textDelivered: false,
-            waiting: false,
-            optedIn: false,
+            delivered: false
+
     }
     this.sendText = this.sendText.bind(this)
 }
 
     sendText(){
-        this.setState({
-            textSent: true
-        })
-        
+        setTimeout(()=>{
+            this.setState({
+                textSent: true,
+                delivering: true
+            })
+        }, 100)
+        setTimout(()=>{
+            this.setState({
+                delivering: false,
+                delivered: true
+            })
+        }, 3000)
         }
 
 
@@ -92,13 +99,22 @@ export default class nonMember extends Component{
                         }
 
                         {
-                          this.state.textSent ?
+                          this.state.delivering ?
                           <div className='textsProgress'>
                             <img className='spinner' src={spinner} alt='spinner'/>
                             <p className='spinnerText'>DELIVERING TEXT</p>
                         </div> 
                         :
                         null  
+                        }
+
+                        {
+                            this.state.delivered ?
+                            <div className='textsProgress'>
+                                <img className='spinner' src={spinner} alt='spinner'/>
+                                <p className='spinnerText'>TEXT DELIVERED</p>
+                            </div>  :
+                            null
                         }
                         
                     <div className='progressBarContainer'>
