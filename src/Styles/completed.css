@@ -60,7 +60,7 @@
     font-family: Raleway;
     font-size: .5rem;
     margin-top: 5px;
-    text-decoration: underline black;
+    text-decoration: underline black\;
 }
 
 #goBack:visited{
