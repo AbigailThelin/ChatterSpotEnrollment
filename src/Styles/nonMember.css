@@ -162,6 +162,7 @@
 @media screen and (min-width: 480px){
     .nameInput{
         width: 50%;
+        font-size: .8rem;
     }
 }
 
@@ -194,6 +195,7 @@
 @media screen and (min-width: 480px){
     .numberInput{
         width: 50%;
+        font-size: .8rem;
     }
 }
 
@@ -221,6 +223,7 @@
     border: none;
     margin-top: 60px;
     cursor: pointer;
+    font-size: .8rem;
 }
 
 @media screen and (min-width: 480px){
@@ -270,7 +273,7 @@
     text-transform: uppercase;
     margin-top: 10px;
     height: 20px;
-    /* text-decoration: underline; */
+    text-decoration: underline black;
     color: black;
 }
 

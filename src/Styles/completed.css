@@ -34,7 +34,7 @@
 
 #completedNavBtns{
     width: 100%;
-    height: 43%;
+    height: 50%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -45,6 +45,7 @@
 .SearchBtn{
     width: 30%;
     height: 10%;
+    margin-top: 70px;
     background-color: #3498DB;
     display: flex;
     justify-content: center;
@@ -59,11 +60,27 @@
     font-family: Raleway;
     font-size: .5rem;
     margin-top: 5px;
-    text-decoration: underline;
+    text-decoration: underline black;
+}
+
+#goBack:visited{
+    color: pink;
+}
+
+.trophy{
+    animation: wiggle 2s infinite;
+}
+
+@keyframes wiggle{
+    0% {transform: scale(1);} 
+    10%, 20% {transform: scale(0.9) rotate(-3deg);} 
+    30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);} 
+    40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);} 
+    100% {transform: scale(1) rotate(0);} 
 }
 
 #pbContainer{
-    height: 14%;
+    height: 8%;
     /* background-color: orange; */
     display: flex;
     justify-content: space-around;

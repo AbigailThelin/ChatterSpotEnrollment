@@ -51,10 +51,11 @@ export default class AddProfile extends Component{
                     
 
 
-
-                <div className='nextAndBack'>
-                    <Link to='/newMember'><p className='btnNext'> back</p></Link>
-                    <Link to='/completed'><p className='btnNext'>finish </p></Link>
+                <div className='nextAndBackContainer'>
+                    <div className='nextAndBack'>
+                        <Link to='/newMember'><p className='btnNext'> back</p></Link>
+                        <Link to='/completed'><p className='btnNext'>finish </p></Link>
+                    </div>
                 </div>
 
                 <div className='textsProgress' id='profile'>
