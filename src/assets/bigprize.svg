@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 198 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>bigprize</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="62" height="25"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy" transform="translate(-413.000000, -656.000000)">
+            <g id="bigprize" transform="translate(413.000000, 656.000000)">
+                <rect id="Rectangle-405" fill="#3C566F" x="56" y="161" width="87" height="37" rx="2"></rect>
+                <g id="Mask-+-Rectangle-407-+-Rectangle-408" transform="translate(68.000000, 167.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#F59D00" xlink:href="#path-1"></use>
+                    <polygon id="Rectangle-407" fill="#F2C500" mask="url(#mask-2)" points="27.0565584 -12.5 35.8246825 -3.66116524 -3.63187591 36.1135912 -12.4 27.2747564"></polygon>
+                    <polygon id="Rectangle-408" fill="#F2C500" mask="url(#mask-2)" points="51.8565584 -6.25 56.2406204 -1.83058262 16.784062 37.9441738 12.4 33.5247564"></polygon>
+                </g>
+                <rect id="Rectangle-409" fill="#F2C500" x="74" y="155" width="49" height="6" rx="1"></rect>
+                <rect id="Rectangle-410" fill="#F59D00" x="80" y="142" width="37" height="12"></rect>
+                <rect id="Rectangle-411" fill="#F2C500" x="74" y="130" width="49" height="12" rx="2"></rect>
+                <path d="M154,80.2 L154,12 L43,12 L43,80.2 C43,111.017489 67.8481964,136 98.5,136 C129.151804,136 154,111.017489 154,80.2 Z" id="Rectangle-412" fill="#F2C500"></path>
+                <path d="M12.375,46 L12.375,46 C12.375,57.9260669 22.0884418,67.6363636 34.0374134,67.6363636 L163.962587,67.6363636 C175.945525,67.6363636 185.625,57.9614197 185.625,46 C185.625,34.0739331 175.911558,24.3636364 163.962587,24.3636364 L34.0374134,24.3636364 C22.0544752,24.3636364 12.375,34.0385803 12.375,46 L12.375,46 Z M0,46 C0,27.2223185 15.2079585,12 34.0374134,12 L163.962587,12 C182.760931,12 198,27.2605273 198,46 C198,64.7776815 182.792041,80 163.962587,80 L34.0374134,80 C15.2390691,80 0,64.7394727 0,46 L0,46 Z" id="Shape" fill="#F59D00" fill-rule="nonzero"></path>
+                <rect id="Rectangle-414" fill="#F2C500" x="43" y="68" width="111" height="12"></rect>
+                <rect id="Rectangle-413" fill="#F2C500" x="31" y="0" width="136" height="19" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
