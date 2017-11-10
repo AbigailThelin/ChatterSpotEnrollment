@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 100%;
+  height: 500px;
 }
 
 .App-logo {
@@ -25,4 +27,31 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.header{
+  width: 100%;
+  height: 20%;
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  height: 60%;
+}
+
+.addMember{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 9999999;
+}
+
+.Searchlogo{
+  height: 50%;
 }

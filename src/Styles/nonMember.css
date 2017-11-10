@@ -280,3 +280,17 @@
 .btnNext:visited{
     color: #808080
 }
+
+.AddProfileAnimation{
+    animation: slideIn 1s;
+}
+
+@keyframes slideIn{
+    0% { 
+        transform: translate3d(100%, 0, 0); 
+        visibility: visible; 
+    } 
+    100% { 
+        transform: translate3d(0, 0, 0); 
+    } 
+}

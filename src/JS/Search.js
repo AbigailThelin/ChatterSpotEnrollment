@@ -102,10 +102,10 @@ export default class Search extends Component{
             <div className='Search'>
                 <div className='searchBox'>
 
-                    <div className='header'>
+                    {/* <div className='header'>
                         <img className='logo' src={logo} alt='logo'/>
                         <Link to='/newMember'><img className='add' src={plus} alt='add'/></Link>
-                    </div>
+                    </div> */}
 
                     <div className='hoverable'>
                         <img className='QM' src={QM} alt='hover'/>

@@ -14,13 +14,16 @@ export default class Completed extends Component{
 
 
     render(){
-        return(
-            <div className='completed'>
 
-                <div className='header'>
+        const { className } = this.props;
+
+        return(
+            <div className={'completed ' + className}>
+
+                {/* <div className='header'>
                     <img className='logo' src={logo} alt='logo'/>
                     <Link to='/newMember'><img className='add' src={plus} alt='add'/></Link>
-                </div>
+                </div> */}
 
                 <div className='completedHeadContainer'>
                     <p className='completedHeader' id="">THANK YOU!</p>
@@ -35,18 +38,16 @@ export default class Completed extends Component{
                         <Link to='addProfile'><p id='goBack'>GO BACK</p></Link>
                 </div>
 
-            <div id='pbContainer'>
-                {<div className='textsProgress' id='completed'>
-                    <img className='checkmark' src={checkmark} alt='checkmark'/>
-                    <p className='spinnerTextDelivered'>OPTED IN</p>
-                </div>}
+                <div id='pbContainer'>
+                    {<div className='textsProgress' id='completed'>
+                        <img className='checkmark' src={checkmark} alt='checkmark'/>
+                        <p className='spinnerTextDelivered'>OPTED IN</p>
+                    </div>}
 
-                <div className='progressBarContainer'>
-                    <img className='bar' src={alternatePB3} alt='progressBar'/>
-                </div> 
-            </div>
-
-
+                    <div className='progressBarContainer'>
+                        <img className='bar' src={alternatePB3} alt='progressBar'/>
+                    </div> 
+                </div>
             </div>
         )
     }
