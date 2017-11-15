@@ -8,6 +8,7 @@ import clock from '../assets/clock.svg'
 
 import logo from '../assets/cs-logo.png'
 import back from '../assets/back arrow.svg'
+import arrowRight from '../assets/arrow-right.svg'
 
 import AddProfile from './AddProfile';
 import Completed from './Completed';
@@ -77,13 +78,7 @@ export default class nonMember extends Component{
         switch(x){
             case 1:
                 component=<div className='newMember'>
-
-                                {/* <div className='searchHeader'>
-                                    <Link to={'/'}><img className='backArrow' src={back} alt='back'/></Link>
-                                    <img className='Searchlogo' src={logo} alt='logo'/>
-                                </div> */}
-
-
+                    
                                 <div className='directions'>
                                     <p className='vipMember'>Enroll a VIP Member</p>
                                 </div>
@@ -102,25 +97,26 @@ export default class nonMember extends Component{
 
 
                                     
-                                    <button className='sendTextBtn' onClick={this.sendText}>SEND</button>
+                                    <button className='sendTextBtn' onClick={this.sendText}><img src={arrowRight} alt='next' className='nexty'/></button>
                                         {
                                             !this.state.textSent
                                             ?
                                             <div className='btnNext'></div>
                                             :
                                             <div className='nextBtn'>
-                                                <span className='btnNext' onClick={()=>this.profilePage('goToProfile')}>next ></span>
+                                                <span className='btnNext' onClick={()=>this.profilePage('goToProfile')}>next</span>
                                             </div>
                                         }
 
-                                    </div>
+                                </div>
 
                                     
+                        <div className='progressBarContainer'>
                                         {
                                             this.state.textSent ?
                                             null :
                                             <div className='textsProgress'>
-                                                <img className='spinner' src={spinner} alt='spinner'/>
+                                                <img className='spinnerNoAnimation' src={spinner} alt='spinner'/>
                                                 <p className='spinnerText'>WAITING TO SEND TEXT</p>
                                             </div>  
                                         }
@@ -162,7 +158,6 @@ export default class nonMember extends Component{
                                             null
                                         }
                                         
-                                    <div className='progressBarContainer'>
                                         <img className='bar' src={alternatePB1} alt='progressBar'/>
                                     </div> 
 

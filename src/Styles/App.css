@@ -1,37 +1,12 @@
 .App {
   text-align: center;
   width: 100%;
-  height: 500px;
+  height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.header{
+.searchHeader{
   width: 100%;
-  height: 20%;
+  height: 15%;
   background-color: #3498db;
   display: flex;
   justify-content: center;
@@ -39,19 +14,19 @@
 }
 
 .logo{
-  height: 60%;
+  height: 50%;
 }
 
 .addMember{
   width: 30px;
   height: 30px;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  left: 10px;
+  top: 6px;
   cursor: pointer;
   z-index: 9999999;
 }
 
 .Searchlogo{
-  height: 50%;
+  height: 10%;
 }

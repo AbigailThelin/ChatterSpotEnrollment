@@ -6,6 +6,7 @@ import axios from 'axios'
 import QM from '../assets/Question_Mark.svg'
 import logo from '../assets/cs-logo.png'
 import plus from '../assets/+.png'
+import down from '../assets/down.svg'
 
 export default class Search extends Component{
 
@@ -100,6 +101,11 @@ export default class Search extends Component{
 
         return(
             <div className='Search'>
+                <div className='logout'>
+                    <p className='nameLogout'>John Doe</p>
+                    <img src={down} alt='down' className='arrow'/>
+                </div>
+
                 <div className='searchBox'>
 
                     {/* <div className='header'>

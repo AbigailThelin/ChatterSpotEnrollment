@@ -9,6 +9,7 @@ import plus from '../assets/+.png'
 import finished from '../assets/progressBarAssets/finishedProgressBar.svg'
 import checkmark from '../assets/checkmark.svg'
 import trophy from '../assets/bigprize.svg'
+import arrowLeft from '../assets/arrow-left.svg'
 
 export default class Completed extends Component{
 
@@ -35,7 +36,7 @@ export default class Completed extends Component{
                     <Link to='/' className='SearchBtn'><div >
                         <p>GO TO SEARCH</p>
                     </div></Link>
-                        <Link to='addProfile'><p id='goBack'>GO BACK</p></Link>
+                        <Link to='addProfile'><img id='goBack' src={arrowLeft}/></Link>
                 </div>
 
                 <div id='pbContainer'>

@@ -14,8 +14,8 @@ class App extends Component {
       <div className="App">
         <div className='searchHeader'>
             <Link to={'/'}><img className='backArrow' src={back} alt='back'/></Link>
-            <img className='Searchlogo' src={logo} alt='logo'/>
-            <Link to='/newMember'><img className='addMember' src={plus} alt='add'/></Link>
+            {<img className='Searchlogo' src={logo} alt='logo'/>}
+                <Link to='/newMember'><img className='addMember' src={plus} alt='add'/></Link>
         </div>
 
         {Router}

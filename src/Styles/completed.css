@@ -57,10 +57,7 @@
 }
 
 #goBack{
-    font-family: Raleway;
-    font-size: .5rem;
-    margin-top: 5px;
-    text-decoration: underline black\;
+    width: 40%;
 }
 
 #goBack:visited{
@@ -80,10 +77,11 @@
 }
 
 #pbContainer{
-    height: 8%;
-    /* background-color: orange; */
+    height: 30%;
+    background-color: orange;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    margin-top: 30px;
 }

@@ -10,6 +10,8 @@ import backArrow from '../assets/back arrow.svg'
 import profileStatusBar from '../assets/progressBarAssets/ProfileStatusBar.svg'
 import logo from '../assets/cs-logo.png'
 import back from '../assets/back arrow.svg'
+import arrowRight from '../assets/arrow-right.svg'
+import arrowLeft from '../assets/arrow-left.svg'
 import '../Styles/addProfile.css'
 
 export default class AddProfile extends Component{
@@ -52,17 +54,17 @@ export default class AddProfile extends Component{
 
                     <div className='nextAndBackContainer'>
                         <div className='nextAndBack'>
-                            <Link to='/newMember'><p className='btnNext'> back</p></Link>
-                            <button onClick={()=>onNextClicked()} className='btnNext'>finish </button>
+                            <Link to='/newMember'><img className='btnNext' alt='back' src={arrowLeft}/></Link>
+                            <button onClick={()=>onNextClicked()} className='btnNext'><img alt='next'src={arrowRight}/> </button>
                         </div>
                     </div>
 
-                    <div className='textsProgress' id='profile'>
+                    <div className='progressBarContainer2'>
+                    <div className='textsProgress2' id='profile2'>
                         <img className='checkmark' src={checkmark} alt='checkmark'/>
                         <p className='spinnerTextDelivered'>OPTED IN</p>
                     </div>
 
-                    <div className='progressBarContainer'>
                         <img className='bar' src={alternatePB2} alt='progressBar'/>
                     </div> 
             </div>
